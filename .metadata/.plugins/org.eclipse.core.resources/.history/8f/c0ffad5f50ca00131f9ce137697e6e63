@@ -11,7 +11,5 @@ public class main {
 		Start.setVisible(true);
 		Start.add(new JButton("Start"));
 		
-		
-		
 	}
 }

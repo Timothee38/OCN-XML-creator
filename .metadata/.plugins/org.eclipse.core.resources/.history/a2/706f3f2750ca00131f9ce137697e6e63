@@ -1,5 +1,4 @@
 package ocnxmlgen.src;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class main {
@@ -10,8 +9,6 @@ public class main {
 		Start.setSize(500,180);
 		Start.setVisible(true);
 		Start.add(new JButton("Start"));
-		
-		
 		
 	}
 }

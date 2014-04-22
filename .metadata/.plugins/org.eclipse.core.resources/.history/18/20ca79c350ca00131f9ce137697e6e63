@@ -1,6 +1,5 @@
 package ocnxmlgen.src.mainMapElements;
 
-import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 public class mapName {

@@ -1,6 +1,5 @@
 package ocnxmlgen.src.mainMapElements;
 
+public class mapName {
 
-public class mapAuthors{
-	
 }
