@@ -28,7 +28,7 @@ public class XMLCreation {
 	public static String obj;
 	public static String[] rules;
 	
-	public static void XMLCreation() {
+	public XMLCreation() {
 		
 		//public variable imports from me.Captain_Elliott.XMLcreator.start 
 		start start = new start();
@@ -92,6 +92,11 @@ public class XMLCreation {
 			tfe.printStackTrace();
 		  }
 
+	}
+
+	public static void XMLCreation() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
