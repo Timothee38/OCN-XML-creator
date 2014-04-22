@@ -11,14 +11,15 @@ import javax.swing.JCheckBox;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-
 import javax.swing.JTextField;
+
+
 
 
 import me.Captain_Elliott.XMLcreator.XML.XMLCreation;
 
 
-
+@SuppressWarnings("serial")
 public class start extends JFrame {
 
 	private JLabel item1;
