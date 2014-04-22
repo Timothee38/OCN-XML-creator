@@ -58,7 +58,7 @@ public class start extends JFrame {
 		setLayout(new FlowLayout());
 
 		item1 = new JLabel(
-				"This is a XML creator for maps used for the over cast network");
+				"This is a XML creator for maps used for the Overcast network");
 		add(item1);
 		item2 = new JLabel(
 				"This was developed by Captain_Elliott and Timothee38");
