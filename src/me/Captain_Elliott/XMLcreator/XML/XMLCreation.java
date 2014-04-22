@@ -4,8 +4,6 @@ import me.Captain_Elliott.XMLcreator.start;
 
 import java.io.File;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
