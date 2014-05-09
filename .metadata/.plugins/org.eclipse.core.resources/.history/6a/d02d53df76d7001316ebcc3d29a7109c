@@ -1,0 +1,15 @@
+package ocnxmlgen.src;
+import javax.swing.JFrame;
+
+public class main {
+	public main() {
+		
+		start Start = new start();
+		Start.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Start.setSize(500,180);
+		Start.setVisible(true);
+		//adding <?xml version="1.0"?>
+		
+	}
+
+}

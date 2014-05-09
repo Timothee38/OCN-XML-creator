@@ -1,0 +1,14 @@
+package ocnxmlgen.src;
+import javax.swing.JFrame;
+
+import org.w3c.dom.Document;
+
+public class main {
+	public static void handleChannelTag(Document document) {
+		//adding <?xml version="1.0"?>
+		System.out.println("<" + document.getDocumentElement().getNodeName() +">");
+		System.out.println("</" + document.getDocumentElement().getNodeName() +">");
+		
+	}
+
+}
