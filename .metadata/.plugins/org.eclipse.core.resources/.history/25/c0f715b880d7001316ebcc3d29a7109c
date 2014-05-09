@@ -5,6 +5,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Text;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -13,6 +15,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.TransformerFactoryConfigurationError;
@@ -41,14 +44,7 @@ public class writeXML {
 		Element rootElement = xmlDoc.createElement("map");
 		rootElement.setAttribute("proto", "1.3.2");
 		
-		Element authors = xmlDoc.createElement("authors");
-		Element author = xmlDoc.createElement("author");
-		Text authorNameText = xmlDoc.createTextNode("Timothee38");
-		
 		xmlDoc.appendChild(rootElement);
-		rootElement.appendChild(authors);
-		authors.appendChild(author);
-		author.appendChild(authorNameText);
 		
 		//Set Output Format
 		/*OutputFormat outFormat = new OutputFormat(xmlDoc);
