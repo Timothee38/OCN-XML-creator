@@ -5,8 +5,10 @@ import io.ocnxmlgen.*;
 
 public class mapObjective {
 	
+	public static String obj;
+	
 	public static void mapObjective(){
-		String obj = JOptionPane.showInputDialog("Enter the maps Objective (leave blank for no objective)");
+		obj = JOptionPane.showInputDialog("Enter the maps Objective (leave blank for no objective)");
 		if(obj!=null){
 			JOptionPane.showConfirmDialog(null, obj);
 			

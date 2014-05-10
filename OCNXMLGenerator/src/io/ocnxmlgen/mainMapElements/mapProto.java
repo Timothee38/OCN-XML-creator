@@ -7,7 +7,9 @@ import javax.swing.JOptionPane;
 
 
 public class mapProto {
+	
 	public static String proto;
+	
 	public static void mapProto() {
 		proto = JOptionPane
 				.showInputDialog("Enter the current map proto");

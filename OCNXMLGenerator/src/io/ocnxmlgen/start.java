@@ -6,11 +6,18 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactoryConfigurationError;
+
+import org.xml.sax.SAXException;
 
 import io.ocnxmlgen.mainMapElements.*;
+
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.io.IOException;
 
 
 @SuppressWarnings("serial")
@@ -25,6 +32,7 @@ public class start extends JFrame {
 	private JButton NextNamebtn;
 	public static JLabel MapObjectiveValue;
 	private JButton NextObjectivetn;
+	private JButton DebugXML; 				//Debugging purpose - lets you create xml file - remove later
 	
 	public start() {
 		super("Overcast Network XML generator");
@@ -113,6 +121,9 @@ public class start extends JFrame {
 				getContentPane().add(MapObjectiveValue, gbc_lblMapObjective);
 				MapObjectiveValue.setVisible(false);
 				
+				DebugXML = new JButton("Debug - Write XML"); 				//Debugging purpose - lets you create xml file - remove later
+				add(DebugXML);
+				
 				startbtn.addActionListener(new ActionListener() { //action listener to check for a button press event
 					public void actionPerformed(ActionEvent arg02) { //on action performed do...
 						if (startbtn.isEnabled()) { //if start button is clicked
@@ -150,6 +161,30 @@ public class start extends JFrame {
 							MapObjectiveValue.setVisible(true);
 							NextObjectivetn.setVisible(false);
 							mapObjective.mapObjective(); //run maoName() from io.ocnxmlgen.mainMapElements.mapName
+						}
+					}
+				});
+				//Debugging purpose - lets you create xml file - remove later
+				DebugXML.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent arg03) {
+						if(DebugXML.isEnabled()){
+							System.out.println("Debug");
+							try {
+								writeXML.writeXML();
+							} catch (ParserConfigurationException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (TransformerException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (SAXException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (IOException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+							
 						}
 					}
 				});
