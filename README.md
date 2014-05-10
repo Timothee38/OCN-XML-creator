@@ -9,7 +9,8 @@ It'll be coded in <code>java</code> and will have a simple GUI.
 - [X] = Completed
 - [W] = Working on
 - [T] = Todo
--
+
+- List:
 - Basic GUI [X]
 - Advanced GUI [T]
 - Basic Map Elements [W]
