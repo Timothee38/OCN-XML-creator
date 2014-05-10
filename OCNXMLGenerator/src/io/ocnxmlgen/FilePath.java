@@ -19,7 +19,6 @@ public class FilePath {
 			
 			start.FileDir.setVisible(true);
 			start.FileDir.setText("Map Proto: "+ xmlFile.getAbsolutePath());
-			start.NextProtobtn.setVisible(true);
 			
 		}
 

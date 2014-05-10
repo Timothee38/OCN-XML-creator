@@ -29,10 +29,13 @@ public class writeXML {
 		
 	}
 	
-	public static void XMLcreation()
+	public void XMLcreation()
 			throws ParserConfigurationException,
 			TransformerFactoryConfigurationError,
 			IOException, TransformerException {
+		
+		String mapExtension = "map.xml";
+		
 		//DocumentBuilderFactory
 		DocumentBuilderFactory docFactory= DocumentBuilderFactory.newInstance();
 		//DocumentBuilder
@@ -59,13 +62,13 @@ public class writeXML {
 		Transformer transformer = TransformerFactory.newInstance().newTransformer();
 		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 		DOMSource source = new DOMSource(xmlDoc);
-		StreamResult result = new StreamResult(new FileWriter(FilePath.xmlFile + "/map.xml"));
+		StreamResult result = new StreamResult(new FileWriter(FilePath.xmlFile + mapExtension));
 		transformer.transform(source, result);
-		System.out.println("Wrote: " + FilePath.xmlFile.getAbsolutePath());
+		System.out.println("Wrote: " + FilePath.xmlFile);
 	}
 	
 	public static void main(String[] args){
-		writeXML writeXML = new writeXML();
+		/*writeXML writeXML = new writeXML();
 		try {
 			writeXML.XMLcreation();
 		} catch (ParserConfigurationException e) {
@@ -80,7 +83,7 @@ public class writeXML {
 		} catch (TransformerException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 	}
 	

@@ -9,12 +9,12 @@ public class main {
 	public static void main(String[] args) {
 
 		//Getting current monitor size (works on multi screen setups)
-		//GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-		//int width = gd.getDisplayMode().getWidth();
-		//int height = gd.getDisplayMode().getHeight();
+		GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+		int width = gd.getDisplayMode().getWidth();
+		int height = gd.getDisplayMode().getHeight();
 		
-		int height = 1500;
-		int width = 750;
+		//int height = 1500;
+		//int width = 750;
 	
 		
 		start Start = new start();
