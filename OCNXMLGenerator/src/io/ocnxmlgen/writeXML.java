@@ -1,8 +1,10 @@
-package ocnxmlgen.src;
+package io.ocnxmlgen;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
+
+import io.ocnxmlgen.mainMapElements.mapProto;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -19,6 +21,7 @@ import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import io.ocnxmlgen.*;
 
 public class writeXML {
 	
@@ -26,7 +29,7 @@ public class writeXML {
 		
 	}
 	
-	private void XMLcreation()
+	public static void XMLcreation()
 			throws ParserConfigurationException,
 			TransformerFactoryConfigurationError,
 			IOException, TransformerException {
@@ -39,7 +42,7 @@ public class writeXML {
 				
 		//Build XML elements and text nodes
 		Element rootElement = xmlDoc.createElement("map");
-		rootElement.setAttribute("proto", "1.3.2");
+		rootElement.setAttribute("proto", mapProto.proto); //map proto that has been entered by the suer
 		
 		Element authors = xmlDoc.createElement("authors");
 		Element author = xmlDoc.createElement("author");
@@ -56,10 +59,9 @@ public class writeXML {
 		Transformer transformer = TransformerFactory.newInstance().newTransformer();
 		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 		DOMSource source = new DOMSource(xmlDoc);
-		File xmlFile = new File("map1.xml");
-		StreamResult result = new StreamResult(new FileWriter(xmlFile));
+		StreamResult result = new StreamResult(new FileWriter(FilePath.xmlFile + "/map.xml"));
 		transformer.transform(source, result);
-		System.out.println("Wrote: " + xmlFile.getAbsolutePath());
+		System.out.println("Wrote: " + FilePath.xmlFile.getAbsolutePath());
 	}
 	
 	public static void main(String[] args){
