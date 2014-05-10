@@ -10,7 +10,7 @@ It'll be coded in <code>java</code> and will have a simple GUI.
 |---------|----------|----|
 |Basic GUI|Advanced GUI|Back/Forward Steps|
 |         |Basic Map Elements||
-|         |XML File Writing|     |
+|XML File Writing         ||     |
 
 ##Changelog
 - 04/21/2014: initial commit
