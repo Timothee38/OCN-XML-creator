@@ -1,4 +1,4 @@
-package ocnxmlgen.src.mainMapElements;
+package io.ocnxmlgen.mainMapElements;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
