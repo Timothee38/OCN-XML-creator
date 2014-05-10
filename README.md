@@ -8,8 +8,8 @@ It'll be coded in <code>java</code> and will have a simple GUI.
 ##TODO:
 |Completed|Working on|Todo|
 |---------|----------|----|
-|Basic GUI|Advanced GUI|    |
-|         |Basic Map Elements|Back/Forward Steps|
+|Basic GUI|Advanced GUI|Back/Forward Steps|
+|         |Basic Map Elements||
 |         |XML File Writing|     |
 
 ##Changelog
