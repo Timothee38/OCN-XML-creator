@@ -1,7 +1,9 @@
 OCN-XML-creator
 ===============
-This porject is aimed to give averyone the ability to create XML for their maps, quickly, eaisly and intuitively.
+This project is aimed to give averyone the ability to create XML for their maps, quickly, eaisly and intuitively.
 You will navigate through a simple GUI completing steps (Much like a wizard when installing things). When these steps your XML file will be created. 
+
+If you wish to help us, just fork the repo and pull a request :)
 
 It's a project is being worked on by Timothee38 and Captain_Elliott
 It'll be coded in <code>java</code> and will have a simple GUI.
