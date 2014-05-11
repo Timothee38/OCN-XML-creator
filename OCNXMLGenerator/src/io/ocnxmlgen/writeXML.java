@@ -22,10 +22,11 @@ import javax.xml.transform.stream.StreamResult;
 import io.ocnxmlgen.*;
 
 public class writeXML {
+	
 
-	public static void writeXML() throws ParserConfigurationException,
-			TransformerException, SAXException, IOException {
-		String filepath = "C:\\Users\\Elliott\\Desktop\\map.xml";
+	public static void  writeXML() throws ParserConfigurationException,
+			TransformerException {
+
 		// DocumentBuilderFactory
 		DocumentBuilderFactory docFactory = DocumentBuilderFactory
 				.newInstance();
@@ -36,31 +37,37 @@ public class writeXML {
 
 		// Build XML elements and text nodes
 		Element rootElement = xmlDoc.createElement("map");
-		rootElement.setAttribute("proto", mapProto.proto); // map proto that has
-													// been entered by
-													// the user
-
+		rootElement.setAttribute("proto", mapProto.proto); 
+		xmlDoc.appendChild(rootElement);
+		
 		Element name = xmlDoc.createElement("name");
 		Text nameText = xmlDoc.createTextNode(mapName.name);
+		rootElement.appendChild(name);
+		name.appendChild(nameText);
+		
+		Element version = xmlDoc.createElement("version");
+		Text versionText = xmlDoc.createTextNode(mapVersion.version);
+		rootElement.appendChild(version);
+		version.appendChild(versionText); 
 		
 		Element obj = xmlDoc.createElement("objective");
 		Text objText = xmlDoc.createTextNode(mapObjective.obj);
+		rootElement.appendChild(obj);
+		obj.appendChild(objText);
 	
 		Element authors = xmlDoc.createElement("authors");
 		Element author = xmlDoc.createElement("author");
 		Text authorNameText = xmlDoc.createTextNode("Timothee38");
-		
-
-
-		xmlDoc.appendChild(rootElement);
 		rootElement.appendChild(authors);
 		authors.appendChild(author);
 		author.appendChild(authorNameText);
-		rootElement.appendChild(name);
-		name.appendChild(nameText);
-		rootElement.appendChild(obj);
-		obj.appendChild(objText);
+		
 
+
+
+
+
+		
 		// Set Output Format
 		/*
 		 * OutputFormat outFormat = new OutputFormat(xmlDoc);
@@ -68,18 +75,22 @@ public class writeXML {
 		 */
 		
 
-		TransformerFactory transformerFactory = TransformerFactory
-				.newInstance();
+		// write the content into xml file
+		TransformerFactory transformerFactory = TransformerFactory.newInstance();
 		Transformer transformer = transformerFactory.newTransformer();
 		DOMSource source = new DOMSource(xmlDoc);
-		StreamResult result = new StreamResult(new File(filepath));
+		StreamResult result = new StreamResult(new File(FilePath.xmlFilePath + "\\map.xml"));
+		 
+		// Output to console for testing
+		// StreamResult result = new StreamResult(System.out);
+		 
 		transformer.transform(source, result);
-
-		System.out.println("Done");
+		 
+		System.out.println("File saved!");
 
 	}
 
 	public static void main(String[] args) {
-
+		
 	}
 }
